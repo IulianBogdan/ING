@@ -1,0 +1,9 @@
+D:\Code\ING\ChallengeING.Models\bin\Debug\netcoreapp3.1\ChallengeING.Models.deps.json
+D:\Code\ING\ChallengeING.Models\bin\Debug\netcoreapp3.1\ChallengeING.Models.dll
+D:\Code\ING\ChallengeING.Models\obj\Debug\netcoreapp3.1\ChallengeING.Models.csprojAssemblyReference.cache
+D:\Code\ING\ChallengeING.Models\obj\Debug\netcoreapp3.1\ChallengeING.Models.AssemblyInfoInputs.cache
+D:\Code\ING\ChallengeING.Models\obj\Debug\netcoreapp3.1\ChallengeING.Models.AssemblyInfo.cs
+D:\Code\ING\ChallengeING.Models\bin\Debug\netcoreapp3.1\ChallengeING.Models.pdb
+D:\Code\ING\ChallengeING.Models\obj\Debug\netcoreapp3.1\ChallengeING.Models.csproj.CoreCompileInputs.cache
+D:\Code\ING\ChallengeING.Models\obj\Debug\netcoreapp3.1\ChallengeING.Models.dll
+D:\Code\ING\ChallengeING.Models\obj\Debug\netcoreapp3.1\ChallengeING.Models.pdb

@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+    api:
+        image: svc.search
+        build:
+            context: .
+            dockerfile: ../ChallengeING/Dockerfile
+        ports:
+            - 80:80
+        depends_on:
+            - sqlserver
+    sqlserver:
+        image: "mcr.microsoft.com/mssql/server"
+        environment:
+            SA_PASSWORD: "passwordmaster"
+            ACCEPT_EULA: "Y"

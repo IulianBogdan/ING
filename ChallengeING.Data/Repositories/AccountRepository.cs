@@ -54,18 +54,18 @@ namespace ChallengeING.Data.Repositories
 
         public async Task<List<AccountTransactionReport>> GetMonthlyReportForAccount(Guid accountId)
         {
-            var account = await base.GetAsync(accountId);
-
-            var result = account.Transactions
-                                .Where(y => y.TransactionDate.Month == DateTime.Now.Month - 1)
-                                    .GroupBy(g => g.CategoryId)
-                                        .Select(r => new AccountTransactionReport
-                                        {
-                                            CategoryName = r.Key.ToString(),
-                                            TotalAmount = r.Sum(s => s.Amount),
-                                            Currency = account.Currency
-                                        })
-                                        .ToList();
+            var result = _context.Accounts.Where(X => x.ResourceId == accountId)
+                                            .Include(Transactions)
+                                                .SelectMany(x => x.Transactions)
+                                                    .Where(x => x.TransactionDate.Month == DateTime.Now.Month - 1)
+                                                        .GroupBy(g => g.CategoryId)
+                                                            .Select(r => new AccountTransactionReport
+                                                            {
+                                                                CategoryName = r.Key.ToString(),
+                                                                TotalAmount = r.Sum(s => s.Amount),
+                                                                Currency = account.Currency
+                                                            })
+                                                                    .ToList();
             return result;
         }
     }
